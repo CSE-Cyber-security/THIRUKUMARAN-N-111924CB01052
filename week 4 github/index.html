@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <header class="header">
+      <div class="logo" aria-hidden="true">&#9745;</div>
+      <div>
+        <h1>To-Do List</h1>
+        <p>Plan &bull; Do &bull; Achieve</p>
+      </div>
+    </header>
+
+    <section class="body">
+      <div class="add-row">
+        <input id="taskInput" type="text" placeholder="Enter a new task..." maxlength="120" aria-label="New task">
+        <button id="addBtn" class="btn-add">+ Add Task</button>
+      </div>
+      <p id="error" class="error" role="alert"></p>
+
+      <div class="toolbar">
+        <div class="filters" role="tablist">
+          <button class="filter active" data-filter="all">All (<span id="cAll">0</span>)</button>
+          <button class="filter" data-filter="pending">Pending (<span id="cPending">0</span>)</button>
+          <button class="filter" data-filter="completed">Completed (<span id="cDone">0</span>)</button>
+        </div>
+        <span class="stats"><span id="sPending">0</span> pending &middot; <span id="sDone">0</span> completed</span>
+      </div>
+
+      <ul id="taskList" class="task-list"></ul>
+    </section>
+
+    <footer class="footer">Small tasks make big goals</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
